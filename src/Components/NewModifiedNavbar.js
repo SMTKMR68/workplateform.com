@@ -1,13 +1,14 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const NewModifiedNavbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container-fluid bg-dark">
-          <a className="navbar-brand text-warning" href="#/Logo">
+          <Link className="navbar-brand text-warning" to="/">
             WorkPlateform.com
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             data-bs-toggle="collapse"
@@ -23,29 +24,29 @@ const NewModifiedNavbar = () => {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link ms-1" href="#home">
+                <Link className="nav-link ms-1" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link ms-1" href="#Service">
+                <Link className="nav-link ms-1" to="/service">
                   Service
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link ms-1" href="#Product">
+                <Link className="nav-link ms-1" to="/product">
                   Product
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link ms-1" href="#Work-Force">
-                  Home
-                </a>
+                <Link className="nav-link ms-1" to="/workforce">
+                  Work Force
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link ms-1" href="#Contract">
+                <Link className="nav-link ms-1" to="/contract">
                   Contract
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -55,19 +56,20 @@ const NewModifiedNavbar = () => {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link ms-2" href="#Login">
+                <Link className="nav-link ms-2" to="/login">
                   Login
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link ms-2" href="#SigIN">
-                  SigIN
-                </a>
+                <Link className="nav-link ms-2" to="/logout">
+                  Logout
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      <Outlet />
     </>
   );
 };
